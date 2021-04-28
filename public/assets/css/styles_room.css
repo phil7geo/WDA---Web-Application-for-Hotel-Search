@@ -1,0 +1,706 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #000;
+}
+/* ------GLOBAL ELEMENTS ---------*/
+
+@font-face {
+  font-family: 'RobotoR';
+  font-weight: 400;
+  src: url('/public/assets/fonts/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: 'RobotoL';
+  font-weight: 300;
+  src: url('/public/assets/fonts/Roboto-Light.ttf');
+}
+body{
+  background: #fff;
+  color: #000;
+  font-family: 'RobotoL', sans-serif;
+  font-weight: 300;
+}
+/* color at links */
+/*με hover,active κλπ -> ειδικοι κανονες μεσα στα Links */
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus {
+  color: #ff5500;
+
+}
+a:hover {
+    color: #b50707;
+}
+
+
+body > main {
+    margin: 70px 0 0 0;
+    }
+
+body > footer{
+  background: #ccc;
+  border-top: 3px solid #908e8e;
+
+}
+  body > footer p {
+      color: #616161;
+      font-size: 13px;
+      text-align: center;
+      margin: 0;
+      padding: 25px 0;
+  }
+body > header{
+    box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.25) ;
+    position: fixed;
+    top: -75px;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+    background-color: #f6f6f6;
+}
+
+  body > header ul,
+  body >header ul li {
+    list-style: none;
+    list-style-type: none;
+    display: inline-block;
+    margin: 50px 13px 1px 0px;
+    top: 50px;
+    height: 80px;
+  }
+
+/* for hotels button at header (color at hover) */
+  body > header .primary-menu strong:hover {
+    color: black;
+  }
+
+/* user icon for profile ( properties ) */
+  body > header div.container div.primary-menu img {
+    width: 15px;
+    height:auto;
+    color: #ff5500;
+  }
+
+  .page-title {
+      background: #ff5500;
+      border-radius: 4px;
+  }
+    .page-title h2{
+      color: #fff;
+      font-weight: 300;
+      font-family: 'RobotoL';
+      margin: 0px 0px 25px 10px;
+      line-height: 35px;
+    }
+
+  .box{
+      box-sizing: border-box;
+  }
+  .text-right {
+      text-align: right;
+      margin: auto 250px auto auto;
+  }
+  .text-center {
+      text-align: center;
+  }
+
+
+                            /* -----------------------    ROOM-PAGE   --------------------------*/
+
+
+     /*-----PROPERTIES -----*/
+section.container {
+ text-align:center;
+ padding-block: 85px;
+}
+  /*------1st heading with room name,reviews,favourite,price--------*/
+  div.heading-1 {
+    background-color: #ff5500;
+    color: white;
+    display: inline-block;
+    border-radius:3px;
+    width: 64%;
+    text-align:start;
+    height:35px;
+  }
+    div.heading-1 p {
+      margin: 7px 10px 10px 10px;
+    }
+    form.favoriteForm {
+      margin: -31px 0px 0px 510px;
+    }
+    span.night_price {
+      float:right; 
+      margin: -17px 10px 0px 0px;
+    }
+
+
+    div.col-sm-6 img {
+      margin: 30px 513px 0px 0px; 
+      width: 30%;
+    }
+
+  /*--------2nd heading with room informations(guests,roomtype,wifi,parking,pet)-------*/
+  ul.room_info {
+    background-color: #ff5500;
+    color: white;
+    display: inline-block;
+    border-radius:3px;
+    width: 62%;
+    text-align:start;
+    height:55px;
+    list-style-type: none;
+  }
+    li.items {
+      float: left;
+      margin: auto 41px auto auto;
+      border-right: 1px dashed white;
+    }
+      li.items:last-child {
+        border-right:none;
+      }
+      li.items p {
+        text-align: center;
+        margin: 10px -10px;
+        padding: 0px 68px 0px 0px;
+      }
+
+
+  /*---------ALL THE ID->DESCRIPTIONS (ROOM DESCRIPTION,REVIEWS,ADDREVIEW)---------*/
+  #description {
+    text-align: center;
+    width: 60%;
+    margin: 0px 0px 0px 277px;
+    border-left: 2px solid #ff5500;
+  }
+  
+   .book_button {
+      margin-bottom: 20px;
+   }
+    span.btn.btn-brick.button-disabled {
+      background-color: red; 
+      color: white; padding: 4px; 
+      margin-left: 850px;
+    }
+
+    button.btn.btn-brick {
+      height: 40px; 
+      width: 8%; 
+      background-color: #ff5500; 
+      color: white; 
+      margin: 0px 0px 40px 730px; 
+      cursor: pointer;
+    }
+
+    div#googleMap {
+      height: 400px; 
+      width: 66%;
+      margin-left: 275px;
+    }
+
+
+  /*---------FORM'S TEXTAREA TO ADD REVIEWS--------*/
+  textarea#review_comment {
+    width: 104%;
+    margin: 2px 0px 0px 10px;
+    height: 40px
+  }
+
+  button#reviewbtn {
+    height: 40px; 
+    width: 10%; 
+    background-color: #ff5500; 
+    color: white; 
+    margin:10px;
+  }
+
+
+
+
+                              /*------ STAR RADIO BUTTONS rating------*/
+.rating {
+    float:left;
+}
+
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:200%;
+    line-height:1.2;
+    color:#ddd;
+    text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rating > input:checked ~ label {
+    color: #f70;
+    text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: gold;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #ea0;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}
+
+
+
+
+/* HEART (SELECTED OR NOT FOR FAVORITE) */
+
+#checkbox_heart input {
+  display: none;
+}
+
+#checkbox_heart label:before {
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f004";
+  cursor: pointer;
+}
+
+#checkbox_heart label:after {
+  color: #dc0101;
+}
+
+#checkbox_heart input:checked~label,
+#checkbox_heart:not(:checked) label:hover,
+#checkbox_heart:not(:checked) label:hover~label {
+  color: #dc0101;
+}
+  #checkbox_heart .selected {
+    color: #dc0101;
+  }
+
+
+/* ----------------------ΜΕDIA QUERIES - RESPONSIVE DESIGN --------------------------------------*/
+
+@media (max-width: 1280px) {
+  
+    li.main-logo {
+        margin: 50px 0px 0px -180px;
+    }
+
+    .text-right {
+      margin: auto 110px auto auto;
+    }
+
+    div.heading-1 {
+      width: 90%;
+    }
+
+    div.col-sm-6 img {
+    margin: 20px 600px 0px 0px;
+    width: 35%;
+    }
+
+    ul.room_info {
+      font-size: 15px;
+      width: 86%;
+    }
+      li.items {
+        margin: 0px 46px auto 2px;
+      }
+
+    #description {
+       margin: 0px 0px 0px 200px;
+    }
+      #description h1 {
+        padding-left: 15px;
+      }
+
+      span.btn.btn-brick.button-disabled {
+        margin-left: 620px;
+      }
+
+      button.btn.btn-brick {
+        margin: 0px 0px 40px 620px;
+      }
+
+      div#googleMap {
+        width: 90%;
+        margin-left: 50px;
+      }
+
+      #description {
+        margin: 0px 0px 0px 35px;
+        width: 900px;
+      }
+        #description h1 {
+          padding-left: 6px;
+        }  
+
+}
+
+@media (max-width: 1100px) {
+ 
+  li.main-logo {
+    margin: 50px 0px 0px -220px;
+  }
+
+  .text-right {
+    margin: auto 110px auto auto;
+  }
+
+  div.heading-1 {
+    width: 80%;
+  }
+
+  div.col-sm-6 img {
+    margin: 20px 500px 0px 0px;
+    width: 25%;
+  }
+
+  ul.room_info {
+    font-size: 12px;
+    width: 77%;
+  }
+    li.items {
+      margin: 5px 17px auto 2px;
+    }
+      li.items p {
+        margin: 10px -6px;
+        padding: 0px 58px 0px 0px;
+      }
+
+  #description {
+      margin: 0px 0px 0px 100px;
+  }
+
+  div.textarea-form-group.controls {
+    width: 730px;
+  }
+
+
+}
+
+@media (max-width: 900px)  {
+  .text-right {
+    margin: auto 70px auto auto;
+  }
+
+  li.main-logo {
+    margin: 50px 0px 0px -300px;
+  }
+
+  div.heading-1 {
+    width: 90%;
+  }
+    div.heading-1 p {
+      margin: 10px 10px 10px 7px;
+      font-size: 12px;
+    }
+    form.favoriteForm {
+      margin: -29px 0px 0px 410px;
+    }
+    span.night_price {
+      margin: -14px 10px 0px 0px;
+      font-size: 12px;
+    }
+
+    div.col-sm-6 img {
+      margin: 20px 525px 0px 0px;
+      width: 22%;
+    }
+
+    ul.room_info {
+      font-size: 10px;
+      width: 86%;
+      height: 47px;
+    }
+      li.items {
+        margin: 3px 18px auto 0px;
+      }
+        li.items p {
+        margin: 9px 3px;
+        padding: 0px 49px 0px 0px;
+        }
+
+    #description {
+        margin: 0px 0px 0px 35px;
+    }
+
+    div#googleMap {
+      width: 93%;
+      margin-left: 25px;
+  }
+
+    form.reviewForm button {
+      font-size: 10px;
+    }
+
+    #description {
+      margin: 0px 0px 0px 35px;
+      width: 900px;
+    }
+      #description h1 {
+        padding-left: 6px;
+      }
+    
+    div.textarea-form-group.controls {
+      width: 650px;
+    }
+    
+    button#reviewbtn {
+      margin-left: -200px;
+    }
+
+}
+
+@media (max-width: 785px)  {
+  
+  div.col-sm-6 img {
+    margin: 20px 449px 0px 0px;
+    width: 24%;
+  }
+
+  ul.room_info {
+    font-size: 9px;
+    width: 86%;
+    height: 40px;
+  }
+    li.items {
+      margin: 3px 0px auto 0px;
+    }
+      li.items p {
+        margin: 6px 3px;
+        padding: 0px 48px 0px 0px;
+      }
+    
+    #description {
+        margin: 0px 0px 0px 28px;
+        width: 600px;
+    }
+      #description h1 {
+        font-size: 16px
+      }
+
+    span.btn.btn-brick.button-disabled {
+        margin-left: 465px;
+    }
+
+    button.btn.btn-brick {
+      margin: 0px 0px 40px 520px;
+    }
+
+    div#reviews {
+      width: 170px;
+    }
+
+    div.textarea-form-group.controls {
+      width: 550px;
+    }
+
+    button#reviewbtn {
+      margin-left: -40px;
+    }
+
+  }
+
+@media (max-width: 640px)  {
+
+  li.main-logo {
+    margin: 50px 0px 0px -330px;
+  }
+
+  div.heading-1 {
+    width: 86%;
+  }
+    div.heading-1 p {
+      margin: 10px 0px 10px 6px;
+      font-size: 9px;
+    }
+    div.heading-1 span {
+      font-size: 9px;
+    }
+
+  form.favoriteForm {
+    margin: -26px 0px 0px 293px;
+  }
+
+  div.col-sm-6 img {
+    margin: 20px 335px 0px 0px;
+    width: 22%;
+  }
+
+  li.items p {
+    padding: 0px 22px 0px 0px;
+  }
+
+  #description {
+    width: 450px;
+  }
+
+  span.btn.btn-brick.button-disabled {
+    margin-left: 340px;
+  }
+
+  button.btn.btn-brick {
+    margin: 0px 0px 40px 350px;
+    font-size: 10px;
+  }
+
+  div.textarea-form-group.controls {
+    width: 400px;
+  }
+
+}
+
+@media (max-width: 490px)  {
+  
+  .text-right {
+    margin: auto 0px auto auto;
+  }
+
+  div.heading-1 {
+    width: 90%;
+  }
+    div.heading-1 p {
+        margin: 13px 0px 10px 2px;
+        font-size: 7px;
+    }
+    div.heading-1 span {
+      font-size: 7px;
+    }
+
+  form.favoriteForm {
+    margin: -24px 0px 0px 223px;
+  }
+
+  div.col-sm-6 img {
+    margin: 20px 250px 0px 0px;
+    width: 21%;
+  }
+
+  ul.room_info {
+    font-size: 7px;
+    width: 81%;
+    height: 32px;
+  }
+    li.items p {
+      padding: 0px 7px 0px 0px;
+    }
+
+  #description {
+      width: 350px;
+  }
+
+  span.btn.btn-brick.button-disabled {
+    margin-left: 200px;
+  } 
+
+  button.btn.btn-brick {
+    margin: 0px 0px 40px 250px;
+    font-size: 9px;
+    width: 40px;
+  }
+
+  div#googleMap {
+    width: 75%;
+    margin-left: 25px;
+  }
+
+  div.textarea-form-group.controls {
+    width: 265px;
+  }
+
+  button#reviewbtn {
+    margin-left: -10px;
+    width: 13%;
+  }
+
+}
+
+@media (max-width: 325px)  {
+
+  li.main-logo {
+    margin: 50px 0px 0px -380px;
+  }
+
+  div.heading-1 {
+    width: 95%;
+  }
+    div.heading-1 p {
+      margin: 13px 0px 10px 0px;
+      font-size: 6px;
+    }
+    div.heading-1 span {
+      font-size: 6px;
+    }
+  form.favoriteForm {
+    margin: -24px 0px 0px 185px;
+  }
+   #checkbox_heart .selected {
+    color: #dc0101;
+    font-size: 10px;
+   }
+
+  div.col-sm-6 img {
+  margin: 22px 200px 0px 0px;
+  width: 20%;
+  }
+
+  ul.room_info {
+    font-size: 6px;
+    width: 81%;
+    height: 30px;
+  }
+    li.items p {
+      padding: 0px 1px 0px 0px;
+    }
+  
+  #description {
+      width: 250px;
+  }
+
+  span.btn.btn-brick.button-disabled {
+    margin-left: 125px;
+  }
+
+  div#googleMap {
+    width: 80%;
+    margin-left: 30px;
+  }
+
+  div.textarea-form-group.controls {
+    width: 185px;
+  }
+
+  button#reviewbtn {
+    width: 22%;
+  }
+  
+}

@@ -1,0 +1,301 @@
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #000;
+}
+/* ------GLOBAL ELEMENTS ---------*/
+
+@font-face {
+  font-family: 'RobotoR';
+  font-weight: 400;
+  src: url('/public/assets/fonts/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: 'RobotoL';
+  font-weight: 300;
+  src: url('/public/assets/fonts/Roboto-Light.ttf');
+}
+body{
+  background: #fff;
+  color: #000;
+  font-family: 'RobotoL', sans-serif;
+  font-weight: 300;
+}
+/* color at links */
+/*με hover,active κλπ -> ειδικοι κανονες μεσα στα Links */
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus {
+  color: #ff5500;
+
+}
+a:hover {
+    color: #b50707;
+}
+
+
+body > main {
+    margin: 70px 0 0 0;
+    }
+
+body > footer{
+  background: #ccc;
+  border-top: 3px solid #908e8e;
+
+}
+  body > footer p {
+      color: #616161;
+      font-size: 13px;
+      text-align: center;
+      margin: 0;
+      padding: 25px 0;
+  }
+body > header{
+    box-shadow: 0px 4px 1px 2px rgba(0, 0, 0, 0.25) ;
+    position: fixed;
+    background: #e6eaff;
+    top: -60px;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+}
+
+  body > header ul,
+  body >header ul li {
+    list-style: none;
+    list-style-type: none;
+    display: inline-block;
+    margin: 50px 13px 1px 0px;
+    top: 50px;
+    height: 80px;
+  }
+
+/* for hotels button at header (color at hover) */
+  body > header .primary-menu strong:hover {
+    color: black;
+  }
+
+/* user icon for profile ( properties ) */
+  body > header div.container div.primary-menu img {
+    width: 15px;
+    height:auto;
+    color: #ff5500;
+  }
+
+  body > header li.main-logo {
+    position:absolute; 
+    left:350px;
+  }
+
+
+                                          /* -----------------    HOME-PAGE   ---------*/
+
+/* PROPERTIES AND BACKGROUND IMAGE (HOTEL-DUBAI) */
+section.hero {
+  /* background: url("/assets/images/hotel2.jpg") no-repeat center center; */
+  background: url("/public/assets/images/hotel2.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 420px 0 330px 0;
+}
+
+
+                            /* -------- FORM PROPERTIES FOR ROOM SEARCH AT HOMEPAGE ------ */
+    section.hero form {
+      background: #fff;
+      width: 30%;
+      margin: -260px auto;
+      box-sizing: border-box;
+      padding: 25px;
+      border-radius: 5px;
+      height: 215px;
+     }
+
+     .ui-datepicker table {
+       width: 100%;
+       font-size: .9em;
+       border-collapse: collapse;
+       margin: 0 0 .4em;
+       color: black;
+       background-color: #eb5d1f;
+     }
+
+
+        section.hero form section.search_Room {
+          margin: 0px auto auto auto;
+          text-align: center;
+        }
+        section.hero form section.Check_dates {
+            width: 96%;
+            text-align: center;
+            margin-left: 8px;
+            padding-bottom: 30px;
+        }
+
+            section.hero form section.Check_dates input {
+              text-align: center;
+              height: 40px;
+              width: 40%;
+              margin: 15px 0px -15px 0px;
+            }
+
+            section.hero form section.search_Room select {
+              background-color: #edeaea;
+              color: grey;
+              width: 40%;
+              height: 40px;
+              margin: -26px auto auto auto;
+              text-align-last: center;
+            }
+
+        section.hero form.action {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        section.hero form input[type="submit"] {
+            border: none;
+            padding: 15px 15px 14px 20px;
+            font-size: 16px;
+            font-family: 'RobotoL';
+            border-radius: 3px;
+            background: no-repeat left 15px center #f50;
+            color: white;
+            margin: 15px auto auto auto;
+        }
+
+          section.hero form input[type="submit"]:hover {
+             background: no-repeat left 15px center #a20d01;
+            background-size: 18px;
+          }
+
+
+.container {
+  width: 1004px;
+  margin: 0 auto;
+}
+
+
+.box{
+    box-sizing: border-box;
+}
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}
+
+
+
+/* ----------------------ΜΕDIA QUERIES - RESPONSIVE DESIGN --------------------------------------*/
+
+@media (max-width: 1100px) {
+  
+  body >header ul li {
+    margin: 50px 50px 0px -25px;
+  }
+
+  li.main-logo {
+    margin: 50px 0px 0px -180px;
+  }
+
+  .container {
+    width: 900px;
+  }
+
+  section.hero form {
+    width: 44%;
+  }
+
+
+}
+
+@media (max-width: 900px)  {
+
+.container {
+    width: 650px;
+    font-size: 15px;
+  }
+
+    section.hero form {
+      width: 50%;
+    }
+      select.form-control {
+        font-size: 13px;
+      }
+
+      section.Check_dates input {
+        font-size: 13px;
+      }
+
+      #SearchButton {
+        font-size: 13px;
+      }
+
+}
+
+
+@media (max-width: 640px)  {
+
+
+  .container {
+    width: 480px;
+  }
+
+  li.main-logo {
+    margin: 50px 0px 0px -230px;
+  }
+
+  section.hero form {
+    width: 50%;
+  }
+    select.form-control {
+      font-size: 10px;
+    }
+
+    section.Check_dates {
+      margin: 0px;
+      width: 100%;
+      text-align: center;
+   }
+      section.Check_dates input {
+        font-size: 10px;
+      }
+
+    #SearchButton {
+      font-size: 10px;
+      margin-top: 20px;
+   }
+
+}
+
+@media (max-width: 490px)  {
+  
+  .container {
+    width: 340px;
+  }
+    li.main-logo {
+      margin: 50px 0px 0px -285px;
+    }
+
+  section.hero form {
+    width: 70%;
+  }
+
+  select.form-control {
+    font-size: 9px;
+  }
+
+  section.hero form section.Check_dates {
+    margin-left: 5px;
+  }
+    section.Check_dates input {
+      font-size: 9px;
+    }
+
+}

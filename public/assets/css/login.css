@@ -1,0 +1,232 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #000;
+}
+/* ------GLOBAL ELEMENTS ---------*/
+
+@font-face {
+  font-family: 'RobotoR';
+  font-weight: 400;
+  src: url('/public/assets/fonts/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: 'RobotoL';
+  font-weight: 300;
+  src: url('/public/assets/fonts/Roboto-Light.ttf');
+}
+body{
+  background: #fff;
+  color: #000;
+  font-family: 'RobotoL', sans-serif;
+  font-weight: 300;
+}
+
+/* color at links */
+/*με hover,active κλπ -> ειδικοι κανονες μεσα στα Links */
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus {
+  color: #ff5500;
+}
+a:hover {
+    color: #b50707;
+}
+
+/*color at button */
+button,
+input[type="button"] {
+    background: #f50;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #ca4502;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 4px;
+    width: 65%;
+    margin-left: 30px;
+}
+      button:hover,
+      input[type="button"]:hover{
+        background: #b50707;
+      }
+      button a,
+      button a:hover,
+      button a:active,
+      button a:visited,
+      button a:focus {
+          color: #fff;
+          text-decoration: auto;
+      }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'RobotoR'
+}
+
+body > header{
+    height: 60px;
+    display: grid;
+    background: #011164;
+}
+  
+.container {
+    width: 1280px;
+    margin: 0 auto;
+  }
+    .container p {
+        padding-left: 300px;
+        margin: 25px auto;
+        font-weight: bold;
+        float: left;
+    }
+    .container .home {
+        float: right;
+        padding-right: 250px;
+        padding-top: 25px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+                                    /*----------------MAIN , CLASS HERO WITH FORM------------*/
+  body > main {
+        background: url("/public/assets/images/login-hotel.jpg") no-repeat center center;
+        background-size: cover;
+        padding: 200px 0 200px 0;
+    }
+
+    section.hero {
+        margin-top:-50px;
+    }
+        section.hero form {
+            background-color: #9fc5e4;
+            border-radius: 12px;
+            width: 350px;
+            padding: 25px;
+            text-align: center;
+            margin-left: 580px;
+        }
+            form .form_group_introduction {
+                display: grid;
+                width: 50%;
+                padding-left: 90px;
+                padding-bottom: 20px;
+            }
+                .form-label {
+                    font-weight: bold;
+                    width: 170px;
+                }
+                
+                .btn_landing {
+                  width: 100px;
+                  height: 45px;
+                  margin-left: 20px;
+                  margin-top: 10px;
+                }
+                form input {
+                  font-size:13px;
+                }
+                input#name.form-control.is-invalid {
+                  font-size: 14px;
+                }
+                input#email.form-control.is-invalid {
+                  font-size: 14px;
+                }
+                input#email_repeat.form-control.is-invalid {
+                  font-size: 14px;
+                }
+                input#password.form-control.is-invalid {
+                  font-size: 14px;
+                }
+
+
+                                     /*-------------------FOOTER----------------------------*/
+  body > footer{
+    background: #ccc;
+    border-top: 4px solid #908e8e;
+  }
+    body > footer p {
+        color: #616161;
+        font-size: 13px;
+        text-align: center;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+
+
+
+    /* ----------------------ΜΕDIA QUERIES - RESPONSIVE DESIGN --------------------------------------*/
+
+@media (max-width: 1100px) {
+
+  .container p {
+    padding-left: 150px;
+  }
+
+  .container .home {
+    padding-right: 150px;
+  }
+
+  section.hero form {
+    margin-left: 300px;
+  }
+
+
+}
+
+
+@media (max-width: 900px)  {
+  
+  section.hero form {
+    margin-left: 180px;
+  }
+}
+
+
+@media (max-width: 640px)  {
+
+  .container {
+    width: 450px;
+  }
+    .container p {
+      padding-left: 50px;
+    }
+    .container .home {
+      padding-right: 40px;
+    }
+
+  section.hero form {
+    margin-left: 100px;
+  }
+}
+
+
+@media (max-width: 490px)  {
+
+  body > main {
+    padding: 246px 0 200px 0;
+  }
+  
+  .container {
+    width: 200px;
+  }
+    .container p {
+      padding-left: 0px;
+    }
+    .container .home {
+      padding-right: 0px;
+    }
+
+  section.hero form {
+    margin-left: 40px;
+    width: 300px;
+    padding: 0px;
+  }
+} 

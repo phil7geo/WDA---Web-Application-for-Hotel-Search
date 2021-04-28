@@ -1,0 +1,431 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #000;
+}
+/* ------GLOBAL ELEMENTS ---------*/
+
+@font-face {
+  font-family: 'RobotoR';
+  font-weight: 400;
+  src: url('/public/assets/fonts/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: 'RobotoL';
+  font-weight: 300;
+  src: url('/public/assets/fonts/Roboto-Light.ttf');
+}
+body{
+  background: #fff;
+  color: #000;
+  font-family: 'RobotoL', sans-serif;
+  font-weight: 300;
+}
+/* color at links */
+/*με hover,active κλπ -> ειδικοι κανονες μεσα στα Links */
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus {
+  color: #ff5500;
+}
+a:hover {
+    color: #b50707;
+}
+
+
+/*color at button */
+button,
+input[type="button"] {
+    background: #f50;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #ca4502;
+    height: 25px;
+  }
+      button:hover,
+      input[type="button"]:hover{
+        background: #b50707;
+      }
+      button a,
+      button a:hover,
+      button a:active,
+      button a:visited,
+      button a:focus {
+          color: #fff;
+          text-decoration: auto;
+      }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'RobotoR'
+}
+
+body > main {
+    margin: 120px 0 0 80px;
+    }
+
+body > footer{
+  background: #ccc;
+  border-top: 4px solid #908e8e;
+  height: 37px;
+  margin: 371px 0px 0px 0px;
+}
+  body > footer p {
+      color: #616161;
+      font-size: 13px;
+      text-align: center;
+      margin: 0;
+      padding: 10px 0;
+  }
+body > header{
+    box-shadow: 32px 4px 12px 2px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+}
+
+  body > header ul,
+  body >header ul li {
+    list-style: none;
+    list-style-type: none;
+    display: inline-block;
+    margin: 50px 13px 1px 0px;
+    top: 50px;
+    height: 80px;
+  }
+
+  body > header .primary-menu strong:hover {
+    color: black;
+  }
+
+  body > header div.container div.primary-menu img {
+    width: 15px;
+    height:auto;
+    color: #ff5500;
+  }
+
+
+
+                                        /* ------LIST PAGE---------*/
+
+.container {
+  width: 1004px;
+  margin: 0 auto;
+}
+
+
+
+
+                                        /*------- FORM (FILTERS SEARCH)------- */
+
+  aside.favorite-review  {
+    width: 220px;
+    display: inline-block;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 3px grey inset;
+    border-radius: 5px;
+  }
+    aside.favorite-review h1  {
+        color: #ff5500;
+        font-weight: normal;
+        font-size: 17px;
+        text-align: start;
+        margin-top: 0px;
+    }
+        .room-name  {
+            font-weight: bold;
+            padding: 11px;
+            margin-top: -10px;
+            margin-left: -6px;
+    }
+        .msg {
+            margin-top: -5px;
+            font-size: 15px;
+            text-align: center;
+            color: #b50707;
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+
+            .favorites .room-name:hover {
+                color: #ff5500;
+            }
+
+            .reviews .room-name:hover {
+                color: #ff5500;
+            }
+
+            .stars {
+                padding: 9px;
+                margin: -35px 0px 20px 0px;
+            }
+
+                                    /*------- RESULTS-HOTEL LIST -------*/
+
+
+/* PAGE RESULTS TITLE FOR HOTEL LIST RESULTS */
+  .page-title {
+      background: #ff5500;
+      border-radius: 4px;
+  }
+    .page-title h2{
+      color: #fff;
+      font-weight: normal;
+      font-family: 'RobotoL';
+      margin: 0px 0px 25px 10px;
+      line-height: 35px;
+      font-size: 20px;
+    }
+
+  .box{
+      box-sizing: border-box;
+  }
+  .text-right {
+      text-align: right;
+  }
+  .text-center {
+      text-align: center;
+  }
+
+
+
+  section.hotel-list {
+    width: 730px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 50px;
+  }
+
+  section.hotel-list article.hotel {
+    padding: 0 0 15px 0;
+    margin: 0 0 25px 0;
+    border-bottom: 1px solid #f0efef;
+  }
+      section.hotel-list article.hotel:last-child {
+          border-bottom: none;
+      }
+
+   /* ------- HOTEL'S INFO (h1-> NAME, h2 -> LOCATION, p -> DESCRIPTION) --------- */
+  article.hotel h1 {
+    color: #000;
+    font-size: 17px;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin: 10px 0 3px 0;
+    font-weight: 500;
+  }
+  article.hotel h2 {
+    color: #c6c6c6;
+    font-size: 13px;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin: auto auto -5px auto;
+    font-weight: 500;
+  }
+  article.hotel p {
+    color: #333;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+
+  /* ----- POSITIONS AND PROPERTIES OF INFO AND IMAGE OF HOTEL ----- */
+      article.hotel .media,
+      article.hotel.info {
+        float:left;
+      }
+      article.hotel .media {
+        width: 15%
+      }
+      article.hotel .media img {
+        width: 117%;
+        height: 91px;
+      }
+
+
+     /*---CAMERA HOVER ICON---*/
+      article.hotel .media .overlay {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .3s ease;
+      }
+      article.hotel .media .overlay .fas {
+        font-size: 33px;
+        position: absolute;
+        top: 27%;
+        left: 42%;
+        background-color: #f50;
+        color: white;
+        padding: 8px;
+      }
+      article.hotel .media:hover .overlay {
+        opacity: 1;
+      }
+
+      article.hotel .info {
+        width: 80%;
+        box-sizing: border-box;
+        padding: 0 0 0 25px;
+        margin: 0 0 0 20%;
+        border-left: 3px solid #f50;
+      }
+
+
+        /* field per night (hotel information) */
+        article.hotel section.informations .night h3 {
+            font-size: 12px;
+            color: white;
+            background: #646464f5;
+            width: 120%;
+            text-align: center;
+            height: 24px;
+            font-weight: normal;
+            padding-top: 5px;
+          }
+
+
+        /*fields count of guest + type of room (hotel informations) */
+        article.hotel section.informations .room-dates h4,h5 {
+            font-size: 11px;
+            color: #7e7e7e;
+            background: #e7e7e7;
+            padding: 10px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 0px 15px 0px 0px;
+            padding-right: 30px;
+          }
+
+
+
+/* ----------------------ΜΕDIA QUERIES - RESPONSIVE DESIGN --------------------------------------*/
+
+@media (max-width: 1100px) {
+
+  .container {
+    width: 850px;
+  }
+    li.main-logo {
+      margin: 50px 0px 0px -180px;
+    }
+
+    aside.favorite-review {
+      width: 210px;
+      margin-left: -30px;
+    }
+        .page-title h2 {
+          font-size: 17px;
+        }
+      
+        aside.favorite-review h1 {
+          font-size: 14px;
+        }
+      
+      section.hotel-list {
+        width: 635px;
+      }
+  
+}
+
+
+@media (max-width: 900px)  {
+
+  .container {
+    width: 640px;
+  }
+    li.main-logo {
+      margin: 50px 0px 0px -250px;
+    }
+
+    aside.favorite-review {
+      width: 330px;
+      margin-left: 120px;
+      margin-bottom: 80px;
+    }
+    
+    section.hotel-list {
+        width: 600px;
+        margin-left: -30px;
+    }
+
+}
+  
+
+@media (max-width: 640px)  {
+  
+  .container {
+    width: 450px;
+  }
+    li.main-logo {
+      margin: 50px 0px 0px -300px;
+    }
+
+    aside.favorite-review {
+      margin-left: 30px;
+    }
+
+    section.hotel-list {
+      width: 510px;
+      margin-left: -95px;
+    }
+
+}
+
+
+@media (max-width: 490px)  {
+
+  .container {
+    width: 340px;
+  }
+    li.main-logo {
+      margin: 50px 0px 0px -350px;
+    }
+
+    aside.favorite-review {
+      margin-left: -15px;
+      width: 250px;
+    }
+
+    section.hotel-list {
+        width: 380px;
+        margin-left: -100px;
+    }
+    
+      article.hotel .media img {
+          width: 100%;
+          height: 50px;
+      }
+
+      .page-title {
+        width: 300px;
+      }
+        .page-title h2 {
+          font-size: 15px;
+          line-height: 25px;
+        }
+
+        article.hotel section.informations .night h3 {
+          font-size: 10px;
+          height: 14px;
+          width: 110%;
+        }
+
+        article.hotel section.informations .room-guests h4, h5 {
+          font-size: 9px;
+        }
+
+}
